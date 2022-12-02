@@ -58,4 +58,8 @@ ORDER BY
 
 Problem 4 : Group the data in the sale table at product_id level. Calculate the number of orders for each product and assign it to a column named number_of_orders. Then, using the HAVING clause, extract products with a number of orders greater than one. Sort the result in descending order by number_of_orders.
 
-=>
+=> select product_id,COUNT(order_id) as number_of_orders 
+   from sale 
+   GROUP by product_id 
+   HAVING number_of_orders>1 
+   ORDER BY number_of_orders desc;
