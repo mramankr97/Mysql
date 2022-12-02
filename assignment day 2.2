@@ -10,14 +10,10 @@ FROM
 WHERE
   salary > 10000;
 
-The query returns values for department_id for which salary is greater than 
-10000. Using the result of this query as a subquery, display the names of all 
+The query returns values for department_id for which salary is greater than 10000. Using the result of this query as a subquery, display the names of all 
 departments for which the above condition is met.
 
-
-=> 
-
-
+=> SELECT department_name from department WHERE department_id IN(SELECT department_id FROM employee WHERE salary>10000);
 
 =====================================================================================================================================================================
 
