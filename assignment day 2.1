@@ -1,0 +1,16 @@
+GROUP BY and HAVING clasuses
+============================
+
+
+Problem 1 : Group data at the Sector level. Then find the average EPS for each sector and assign the alias AvgEPSPerSector. 
+Display sectors with AvgEPSPerSector above 10 and sort the result by the AvgEPSPerSector column in descending order.
+
+=>  select sector,AVG(eps) as AvgEPSPerSector 
+    from Stock 
+    GROUP by sector 
+    HAVING AvgEPSPerSector>10 
+    ORDER by AvgEPSPerSector DESC;
+    
+    
+
+
